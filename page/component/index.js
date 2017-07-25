@@ -51,6 +51,17 @@ Page({
     wx.showToast({
       title: name,
     })
+
+    for (var i = 0, len = list.length; i < len; ++i) {
+      if (list[i].id == id) {
+        list[i].open = !list[i].open
+      } else {
+        list[i].open = false
+      }
+    }
+    this.setData({
+      list: list
+    });
   }
 })
 
